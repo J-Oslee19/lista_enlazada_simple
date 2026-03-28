@@ -18,6 +18,9 @@ public final class LinkedListChallenges {
         
         challenge3Reverse(); 
         System.out.println();
+        
+        challenge4RemoveDuplicates();
+        System.out.println();
     }
 
     private static void challenge1CountOccurrences() {
@@ -71,6 +74,27 @@ public final class LinkedListChallenges {
         try {
             lista.reverseInPlace();
             System.out.println("Después: " + lista);
+        } catch (UnsupportedOperationException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+    
+    private static void challenge4RemoveDuplicates() {
+        SinglyLinkedList<String> lista = new SinglyLinkedList<>();
+        lista.addLast("A");
+        lista.addLast("B");
+        lista.addLast("A");
+        lista.addLast("C");
+        lista.addLast("B");
+        lista.addLast("D");
+
+        System.out.println("Reto 4 - Eliminar duplicados");
+        System.out.println("Antes: " + lista + " size: " + lista.size());
+
+        try {
+            int eliminados = lista.removeDuplicates();
+            System.out.println("Nodos eliminados: " + eliminados);
+            System.out.println("Despues: " + lista + " size: " + lista.size());
         } catch (UnsupportedOperationException ex) {
             System.out.println(ex.getMessage());
         }
