@@ -2,12 +2,6 @@ package umg.edu.gt.listasenlazadas.retos;
 
 import umg.edu.gt.listasenlazadas.simple.SinglyLinkedList;
 
-/**
- * Laboratorio de retos para obligar a extender el codigo base de las estructuras.
- *
- * Cada reto depende de un metodo nuevo que debe implementarse directamente
- * en la clase de estructura correspondiente.
- */
 public final class LinkedListChallenges {
 
     private LinkedListChallenges() {
@@ -15,7 +9,14 @@ public final class LinkedListChallenges {
 
     public static void run() {
         System.out.println("=== RETOS DE IMPLEMENTACION ===");
+        
         challenge1CountOccurrences();
+        System.out.println();
+        
+        challenge2Clean(); 
+        System.out.println();
+        
+        challenge3Reverse(); 
         System.out.println();
     }
 
@@ -29,6 +30,7 @@ public final class LinkedListChallenges {
 
         System.out.println("Reto 1 - Analitica de eventos (lista simple)");
         System.out.println("Eventos: " + eventos);
+
         try {
             int totalLogins = eventos.countOccurrences("LOGIN");
             System.out.println("Resultado esperado para LOGIN: 3");
@@ -36,11 +38,41 @@ public final class LinkedListChallenges {
         } catch (UnsupportedOperationException ex) {
             System.out.println(ex.getMessage());
         }
-        
-        eventos.clean();
-        System.out.println("Eventos: " + eventos + " size: " + eventos.size());
-        
-        System.out.println();
     }
 
+    private static void challenge2Clean() {
+        SinglyLinkedList<String> eventos = new SinglyLinkedList<>();
+        eventos.addLast("A");
+        eventos.addLast("B");
+        eventos.addLast("C");
+
+        System.out.println("Reto 2 - Limpiar lista");
+        System.out.println("Antes: " + eventos + " size: " + eventos.size());
+
+        try {
+            int eliminados = eventos.clean();
+            System.out.println("Nodos eliminados: " + eliminados);
+            System.out.println("Después: " + eventos + " size: " + eventos.size());
+        } catch (UnsupportedOperationException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    private static void challenge3Reverse() {
+        SinglyLinkedList<Integer> lista = new SinglyLinkedList<>();
+        lista.addLast(2);
+        lista.addLast(4);
+        lista.addLast(5);
+        lista.addLast(6);
+
+        System.out.println("Reto 3 - Invertir lista");
+        System.out.println("Antes: " + lista);
+
+        try {
+            lista.reverseInPlace();
+            System.out.println("Después: " + lista);
+        } catch (UnsupportedOperationException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
 }
