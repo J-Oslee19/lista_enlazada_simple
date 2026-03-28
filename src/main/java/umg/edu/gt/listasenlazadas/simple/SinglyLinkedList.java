@@ -137,8 +137,21 @@ public class SinglyLinkedList<T> {
      * @return cantidad de nodos eliminados
      */
     public int clean() {
-        throw new UnsupportedOperationException(
-                "TODO RETO: Implementar clean() en SinglyLinkedList.");
+        int removed = 0;
+        SimpleNode<T> current = head;
+
+        while (current != null) {
+            SimpleNode<T> next = current.getNext();
+            current.setNext(null);
+            current = next;
+            removed++;
+        }
+
+        head = null;
+        tail = null;
+        size = 0;
+
+        return removed;
     }
 
     /**
