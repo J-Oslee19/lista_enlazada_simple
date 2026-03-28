@@ -93,7 +93,7 @@ public class SinglyLinkedList<T> {
     }
 
     /**
-     * RETO 1:
+     * RETO 1:implementado correctamente
      * Cuenta cuantas veces aparece un valor dentro de la lista.
      *
      * Reglas sugeridas:
