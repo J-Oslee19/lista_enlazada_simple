@@ -1,3 +1,41 @@
+#  Implementación de Retos - Listas Enlazadas
+
+##  Integrantes
+- Jeferson Oslee Cermeño Pineda  
+  Carnet: 0905-24-12088  
+
+- Kathya Sofia Melgar Marroquin  
+  Carnet: 0905-24-11709  
+
+---
+
+##  Descripción
+
+En este proyecto se trabajaron los retos propuestos sobre listas enlazadas, implementando los métodos directamente en la estructura `SinglyLinkedList`.
+
+Cada reto permitió comprender mejor cómo funcionan los nodos y cómo manipular las referencias dentro de la lista.
+
+---
+
+##  Retos realizados
+
+- **Reto 1:** Conteo de ocurrencias dentro de la lista  
+- **Reto 2:** Limpieza completa de la lista recorriendo nodo por nodo  
+- **Reto 3:** Inversión de la lista sin usar estructuras auxiliares  
+- **Reto 4:** Eliminación de elementos duplicados  
+
+---
+
+##  Lo aprendido
+
+- Recorridos de listas enlazadas  
+- Manipulación de nodos (`next`)  
+- Uso de punteros (previous, current, next)  
+- Manejo de estructuras sin usar librerías  
+- Organización de commits en Git  
+
+---
+
 # ListasEnlazadas
 
 Proyecto de apoyo para **Programacion 3** con implementaciones propias de:
